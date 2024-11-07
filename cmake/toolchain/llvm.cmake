@@ -9,5 +9,6 @@ sdk_compile_options("-fno-builtin")
 sdk_compile_options("-ffunction-sections")
 sdk_compile_options("-fdata-sections")
 
+sdk_compile_options("--target=riscv32-unknown-elf")
 include(${HPM_SDK_BASE}/cmake/toolchain/lld.cmake)
-
+sdk_ld_options("--target=riscv32-unknown-elf")

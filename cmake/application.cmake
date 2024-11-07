@@ -105,7 +105,7 @@ if(NOT EXISTS ${LOCALIZATION_DST})
     message(FATAL_ERROR "localization dest folder: \"${LOCALIZATION_DST}\" can not be found")
 endif()
 
-if("${TOOLCHAIN_VARIANT}" STREQUAL "zcc")
+if("${TOOLCHAIN_VARIANT}" STREQUAL "zcc" OR "${TOOLCHAIN_VARIANT}" STREQUAL "llvm")
     set(TOOLCHAIN_OBJCOPY_COMMAND ${CROSS_COMPILE}llvm-objcopy)
     set(TOOLCHAIN_OBJDUMP_COMMAND ${CROSS_COMPILE}llvm-objdump)
 else()
